@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Akhil - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
+            margin-top: 10%;
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
         }
@@ -16,6 +17,10 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: fixed;
+            top: 0;
+            display: block;
+            width: 100%;
         }
         header h1 {
             margin: 0;
@@ -30,19 +35,47 @@
             margin: 0 1rem;
         }
         section {
-            padding: 2rem;
+            padding: 1rem 10%;
             max-width: 1100px;
             margin: 0 auto;
         }
-        .about, .projects, .contact {
+        /* .about, .skills, .contact {
             margin-bottom: 2rem;
-        }
-        .projects img {
+        } */
+        .skills img {
             max-width: 100%;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 5px;
             margin-top: 1rem;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+        h3 {
+            margin-bottom: 0;
+        }
+        p {
+            margin: 0;
+        }
+        span {
+            display: block;
+        }
+        .resume {
+            /* text-align: center; */
+            margin-bottom: 2rem;
+        }
+        .resume a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .resume a:hover {
+            background: #0056b3;
         }
         footer {
             background: #333;
@@ -51,35 +84,90 @@
             padding: 1rem 0;
             margin-top: 2rem;
         }
+        .company-name {
+            font-size: 20px;
+        }
+        .designation {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #skill-names {
+            display: flex;
+            flex-direction: row;
+
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <h1>Akhil</h1>
         <nav>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
+            <a href="#resume">Resume</a>
         </nav>
     </header>
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Welcome to my portfolio website! I am [Your Profession], passionate about [Your Interests/Expertise]. With experience in [Your Skills/Field], I aim to [Your Goals or Mission Statement].</p>
+        <p>
+            Hi, I’m Akhil, a skilled backend developer with over 4 years of experience building scalable and robust applications. I specialize in designing efficient systems and deploying them across various infrastructures, including AWS, Azure, and on-premise solutions.
+            With a strong foundation in Node.js, Python, Javascript, Typescript, I’m passionate about optimizing performance and ensuring reliability in every project I take on.
+        </p>
     </section>
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <p>Here are some of the projects I have worked on:</p>
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
         <div>
-            <h3>Project 1</h3>
-            <p>Description of Project 1</p>
-            <img src="project1.jpg" alt="Project 1">
+            <h3>Rooter.gg</h3>
+            <p>SDE-2 (Dec, 24 - Present)</p>
+            <ul>
+                <li>Added the functionality to earn 2x rewards by completing daily tasks in the <a href="https://play.google.com/store/apps/details?id=com.threesixteen.app&hl=en_IN">rooter.gg</a> e-sports and gaming app.</li>
+                <li>Scaled <b>Kubernetes</b> cluster to handle approximately <b>100,000</b> concurrent viewers on the application.</li>
+                <li>Implemented <b>HLS support</b> in the streaming service, enabling users to stream content in <b>multiple resolutions
+                    (480p, 720p, 1080p)</b> based on their network bandwidth.</li>
+            </ul>
         </div>
         <div>
-            <h3>Project 2</h3>
-            <p>Description of Project 2</p>
-            <img src="project2.jpg" alt="Project 2">
+            <h3>Nagarro</h3>
+            <p>Senior Engineer (Oct 20 - Dec, 24)</p>
+            <ul>
+                <li><b>Led the GenAI assistant project</b> to answer user queries by searching for relevant information from the database,
+                    handling about <b>2,000 queries per second</b>.</li>
+                <li>Developed <b>RESTful APIs</b> using Node.js and Python, serving 2 million requests per day.</li>
+                <li>Designed and implemented <b>Redis</b> and <b>Qdrant</b> clusters, ensuring scalability and high availability, resulting in a
+                    40% improvement in response times and a 99.9% uptime rate.</li>
+                <li>Created a <b>RabbitMQ message queue</b> to process and send about <b>2,000 WhatsApp messages</b> per second.</li>
+                <li>Deployed a <b>CI/CD</b> system using <b>GitLab</b>, replacing manual deployment and reducing integration and deployment
+                    time by up to <b>200%</b>.</li>
+                <li>Replaced <b>Elasticsearch</b> with <b>Qdrant vector store</b>, improving search efficiency by <b>20%</b>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div id="skill-names">
+            <ul>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>Typescript</li>
+                <li>Nest.js</li>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+            </ul>
+            <ul>
+                <li>CassandraDB</li>
+                <li>RabbitMQ</li>
+                <li>Redis</li>
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>Kubernetes</li>
+            </ul>
         </div>
     </section>
 
@@ -87,14 +175,20 @@
         <h2>Contact</h2>
         <p>If you'd like to get in touch, feel free to reach out:</p>
         <ul>
-            <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></li>
-            <li>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></li>
+            <li>Contact: +918447004959</li>
+            <li>Email: <a href="mailto:akhilas.singh@gmail.com">akhilas.singh@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/akhilhind" target="_blank">Akhil's profile</a></li>
+            <li>GitHub: <a href="https://github.com/akhilhind" target="_blank">github.com/akhilhind</a></li>
         </ul>
     </section>
 
+    <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" download>Download My Resume</a>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Akhil. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
